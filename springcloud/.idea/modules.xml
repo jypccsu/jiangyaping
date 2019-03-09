@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="ProjectModuleManager">
+    <modules>
+      <module fileurl="file://$PROJECT_DIR$/demoeureka/demoeureka.iml" filepath="$PROJECT_DIR$/demoeureka/demoeureka.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demofeignclient/demofeignclient.iml" filepath="$PROJECT_DIR$/demofeignclient/demofeignclient.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoserviceconsumer/demoserviceconsumer.iml" filepath="$PROJECT_DIR$/demoserviceconsumer/demoserviceconsumer.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoserviceprovider/demoserviceprovider.iml" filepath="$PROJECT_DIR$/demoserviceprovider/demoserviceprovider.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoserviceproviderapi/demoserviceproviderapi.iml" filepath="$PROJECT_DIR$/demoserviceproviderapi/demoserviceproviderapi.iml" />
+      <module fileurl="file://$PROJECT_DIR$/demoservicezuul/demoservicezuul.iml" filepath="$PROJECT_DIR$/demoservicezuul/demoservicezuul.iml" />
+      <module fileurl="file://$PROJECT_DIR$/springcloud.iml" filepath="$PROJECT_DIR$/springcloud.iml" />
+    </modules>
+  </component>
+</project>

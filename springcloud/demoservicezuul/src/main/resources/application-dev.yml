@@ -1,0 +1,10 @@
+zuul:
+  #ignoredServices: '*'
+  routes:
+    # 用户服务
+    user-service:
+      path: /user-service/**
+      serviceId: service-consumer
+      strip-prefix: false    #false：不去除掉前缀
+  prefix: /api
+
