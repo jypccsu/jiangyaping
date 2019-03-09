@@ -1,0 +1,17 @@
+server:
+  port: 8080
+  servlet:
+    context-path: /girl
+
+cupSize: F
+
+girl:
+  cupSize: F
+  age: 28
+  content: "年龄：${girl.age}，罩杯：${girl.cupSize}"
+spring:
+  datasource:
+    driver-class-name: com.mysql.jdbc.Driver
+    url: jdbc:mysql://localhost:3306/studentdb
+    username: root
+    password: 123456
