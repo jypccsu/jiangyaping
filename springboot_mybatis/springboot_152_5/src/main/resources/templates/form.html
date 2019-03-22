@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script th:src="@{/js/jquery-1.8.0.min.js}"></script>
+    <script>
+        $(function () {
+            $("#btnSubmit").click(function () {
+                //非空验证
+                var name=$("#name").val();
+                var age=$("#age").val();
+                var cupSize=$("#cupSize").val();
+                if(name.trim().length==0
+                    ||age.trim().length==0
+                    ||cupSize.trim().length==0){
+                    alert("带*项不能为空");
+                    return;
+                }
+                $("#form1").submit();
+            });
+        })
+    </script>
+    <style type="text/css">
+        .msg{
+            color: red;
+        }
+        .container{
+            width:350px;
+            margin:0px auto;
+            border:1px solid gray;
+            text-align: center;
+        }
+        table{
+            width:300px;
+            border-collapse: collapse;
+        }
+        table td{
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <H2 align="center">修改女生信息</H2>
+<form id="form1" method="post" action="/girls" th:object="${girl}">
+    <table align="center">
+        <tr>
+            <td><input type="hidden" name="id" th:value="*{id}">姓名</td>
+            <td><input type="text" id="name" name="name" th:value="*{name}"><span class="msg">*</span></td>
+        </tr>
+        <tr>
+            <td>年龄</td>
+            <td><input type="text" id="age" name="age" th:value="*{age}"><span class="msg">*</span></td>
+        </tr>
+        <tr>
+            <td>罩杯</td>
+            <td><input type="text" id="cupSize" name="cupSize" th:value="*{cupSize}"><span class="msg">*</span></td>
+        </tr>
+        <tr>
+            <td>地址</td>
+            <td><input type="text" id="address" name="address" th:value="*{address}"></td>
+        </tr>
+        <tr>
+            <td colspan="2">
+                <input type="button" id="btnSubmit" value="保存">
+            </td>
+        </tr>
+    </table>
+</form>
+</div>
+</body>
+</html>

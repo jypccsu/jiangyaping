@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en" xmlns:th="http://www.thymeleaf.org"
+      xmlns:layout="http://www.ultraq.net.nz/thymeleaf/layout">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script>
+        function del(id) {
+            if(confirm("真的要删除吗?")){
+                location.href="/girls/delete/"+id;
+            }
+        }
+        function  updateGirl(id) {
+            location.href="/girls/modify/"+id;
+        }
+    </script>
+    <style type="text/css">
+        .container{
+            width:550px;
+            margin:0px auto;
+            border:1px solid gray;
+            text-align: center;
+        }
+        table{
+            width:500px;
+            border-collapse: collapse;
+        }
+        table td{
+            border:1px solid gray;
+        }
+    </style>
+</head>
+<body>
+<div class="container">
+    <h2 align="center">女神管理系统</h2>
+<table align="center">
+    <tr>
+        <td>编号</td>
+        <td>姓名</td>
+        <td>年龄</td>
+        <td>罩杯</td>
+        <td>地址</td>
+        <td>操作</td>
+    </tr>
+    <tr th:each="girl : ${girls}">
+        <td th:text="${girl.id}"></td>
+        <td th:text="${girl.name}"></td>
+        <td th:text="${girl.age}"></td>
+        <td th:text="${girl.cupSize}"></td>
+        <td th:text="${girl.address}"></td>
+        <td><a th:href="'javascript:updateGirl(\''+${girl.id}+'\')'">修改</a>
+            <a th:href="'javascript:del(\''+${girl.id}+'\')'">删除</a></td>
+    </tr>
+</table>
+<p align="center"><a href="/girls/form">增加女生</a></p>
+</div>
+</body>
+</html>
